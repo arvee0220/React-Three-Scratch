@@ -10,9 +10,7 @@ export default function Group({ position }: GroupProps) {
     const cubeRef = useRef<THREE.Mesh>(null);
     const planeRef = useRef<THREE.Mesh>(null);
 
-    useFrame((state, delta) => {
-        
-        
+    useFrame(( _, delta) => {        
         if (cubeRef.current) {
             cubeRef.current.rotation.y += delta;
         }
@@ -30,7 +28,7 @@ export default function Group({ position }: GroupProps) {
             <mesh position-x={2} ref={cubeRef}>
                 <boxGeometry args={[1, 1, 1]} />
                 <meshBasicMaterial color="lightblue" />
-            </mesh>
+            </mesh>            
         </group>
     );
 }

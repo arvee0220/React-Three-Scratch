@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const Custom = () => {
+export default function Custom() {
     const customGeometry = new Float32Array([0, 0, 0, 0, 1, 0, 1, 0, 0]);
 
     return (
@@ -13,4 +13,4 @@ const Custom = () => {
     );
 };
 
-export default Custom;
+
