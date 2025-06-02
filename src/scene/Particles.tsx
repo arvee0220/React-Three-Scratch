@@ -7,13 +7,13 @@ export default function Particles() {
     
     const pointRef = useRef<THREE.Points>(null);
 
-    const verticesQuantity = 4000;
+    const verticesQuantity = 6000;
 
-    const verticesArray = new Float32Array(verticesQuantity * 4);
+    const verticesArray = new Float32Array(verticesQuantity * 6);
 
     // random location of points
     for (let i = 0; i < verticesQuantity * 4; i++) {
-        verticesArray[i] = (Math.random() - 0.5) * 10.0; // 10.0 is the particle spread or distance
+        verticesArray[i] = (Math.random() - 0.5) * 30.0; // 10.0 is the particle spread or distance
     }
 
     useFrame((_, delta) => {
@@ -28,7 +28,7 @@ export default function Particles() {
             <bufferGeometry>
                 <bufferAttribute attach="attributes-position" args={[verticesArray, 3]} count={verticesArray.length}/>
             </bufferGeometry>
-            <pointsMaterial size={0.05} alphaMap={texture} transparent depthTest={false}/>
+            <pointsMaterial size={0.1} alphaMap={texture} transparent depthTest={false}/>
         </points>
     );
 }
