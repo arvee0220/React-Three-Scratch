@@ -20,7 +20,7 @@ export default function App() {
             {/* <Group /> */}
             {/* <Custom/> */}
             <Particles />
-            <Suspense fallback={<TorusKnot/>}>
+            <Suspense fallback={<TorusKnot />}>
                 <PredatorModel />
             </Suspense>
         </Canvas>
