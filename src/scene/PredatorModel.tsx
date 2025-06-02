@@ -5,14 +5,15 @@ import { useGLTF } from "@react-three/drei";
 useGLTF.preload("/models/scene.gltf");
 
 export default function PredatorModel() {
-
     // Method #1 using useLoader from @react-three/fiber
     // const predator = useLoader(GLTFLoader, "./models/scene.gltf");
 
     // Method #2 using useGLTF from @react-three/drei
     const predator = useGLTF("/models/scene.gltf");
 
-    // Method #3 transform gltf models via https://gltf.pmnd.rs/    
+    // Method #3 transform gltf models via https://gltf.pmnd.rs/
+
+    console.log(predator);
 
     return (
         <>
