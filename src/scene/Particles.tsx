@@ -3,7 +3,7 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { useRef } from "react";
 
 export default function Particles() {
-    const texture = useLoader(THREE.TextureLoader, "./textures/star.jpg");
+    const texture = useLoader(THREE.TextureLoader, "/textures/star.jpg");
     
     const pointRef = useRef<THREE.Points>(null);
 

@@ -6,7 +6,7 @@ import * as THREE from "three";
 import Particles from "./scene/Particles";
 import PredatorModel from "./scene/PredatorModel";
 import { Suspense } from "react";
-import TorusKnot from "./scene/TorusKnot";
+import Loader from "./loader/Loader";
 
 export default function App() {
     const canvasHandler = (state: { gl: THREE.WebGLRenderer }) => {
@@ -20,7 +20,7 @@ export default function App() {
             {/* <Group /> */}
             {/* <Custom/> */}
             <Particles />
-            <Suspense fallback={<TorusKnot />}>
+            <Suspense fallback={<Loader />}>
                 <PredatorModel />
             </Suspense>
         </Canvas>
