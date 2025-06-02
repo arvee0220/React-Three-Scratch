@@ -14,9 +14,6 @@ importers:
       '@react-three/fiber':
         specifier: ^9.1.2
         version: 9.1.2(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(three@0.176.0)
-      '@types/three':
-        specifier: ^0.176.0
-        version: 0.176.0
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -36,6 +33,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.2
         version: 19.1.5(@types/react@19.1.5)
+      '@types/three':
+        specifier: ^0.176.0
+        version: 0.176.0
       '@vitejs/plugin-react':
         specifier: ^4.4.1
         version: 4.5.0(vite@6.3.5)

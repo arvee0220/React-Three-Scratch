@@ -4,6 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 // import Custom from "./scene/CustomShape";
 import Particles from "./scene/Particles";
+import PredatorModel from "./scene/PredatorModel";
+import { Suspense } from "react";
+import TorusKnot from "./scene/TorusKnot";
 
 export default function App() {
     const canvasHandler = (state: { gl: THREE.WebGLRenderer }) => {
@@ -12,11 +15,14 @@ export default function App() {
     };
 
     return (
-        <Canvas className="canvas" gl={{ alpha: true }} camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 100 }} onCreated={canvasHandler}>
+        <Canvas className="canvas" /* gl={{ alpha: true }} */ camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 100 }} onCreated={canvasHandler}>
             <OrbitControls />
             {/* <Group /> */}
             {/* <Custom/> */}
-            <Particles/>
+            <Particles />
+            <Suspense fallback={<TorusKnot/>}>
+                <PredatorModel />
+            </Suspense>
         </Canvas>
     );
 }
